@@ -8,10 +8,9 @@
  * Controller of the angularjsPortfolioApp
  */
 angular.module('angularjsPortfolioApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('MainCtrl', ['$http', function ($http) {
+    $http.get('http://127.0.0.1/lem_portfolio_page/works/')
+    	.success( function (data) {
+    		console.log(data);
+    	});
+  }]);
