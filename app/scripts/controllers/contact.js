@@ -2,13 +2,12 @@
 
 /**
  * @ngdoc function
- * @name angularjsPortfolioApp.controller:ContactCtrl
+ * @name angularjsPortfolioApp.controller:ContactController
  * @description
- * # ContactCtrl
+ * # ContactController
  * Controller of the angularjsPortfolioApp
  */
 angular.module('angularjsPortfolioApp')
-  .controller('ContactCtrl', function ($scope) {
-    $scope.awesomeThings = [
-    ];
-  });
+  .controller('ContactController',[ '$http', function ($http) {
+
+  }]);

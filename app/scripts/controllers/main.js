@@ -9,8 +9,19 @@
  */
 angular.module('angularjsPortfolioApp')
   .controller('MainCtrl', ['$http', function ($http) {
-    $http.get('http://127.0.0.1/lem_portfolio_page/works/')
+  	var self = this;
+  	self.works = [];
+    $http.get('./data/works.json')
     	.success( function (data) {
     		console.log(data);
+    		self.works = chunk(data, 3);
     	});
   }]);
+
+function chunk(arr, size) {
+  var newArr = [];
+  for (var i=0; i < arr.length; i += size) {
+    newArr.push(arr.slice(i, i+size));
+  }
+  return newArr;
+}
