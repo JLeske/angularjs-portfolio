@@ -3,6 +3,20 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
-li.logo:hover > a, li.logo:visited > a {
-	/*background-color:white;*/
+.logo {
+	margin-left:60px;
+	float:left;
+	.subtitle {
+		font-size:10px;
+	}
+}
+
+.filter {
+	border-bottom: 1px solid #000;
+	padding-bottom: 20px;
+	margin-bottom: 30px;
+
+	button {
+		padding: 10px;
+	}
 }

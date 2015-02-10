@@ -1,19 +1,19 @@
 <div class="jumbotron" ng-controller="MainCtrl as ctrl">
   <div>
-  	<div class="nav">
-      <button class="nav-pill pull-left" ng-click="ctrl.doFilter('all')">Show all</button>
-      <button class="nav-pill pull-left" ng-click="ctrl.doFilter(2);">html</button>
-      <button class="nav-pill pull-left" ng-click="ctrl.doFilter(1);">ios</button>
-      <button class="nav-pill pull-left" ng-click="ctrl.doFilter(4);">web app</button>
-      <button class="nav-pill pull-left" ng-click="ctrl.doFilter(5);">hybrid</button>
-      <button class="nav-pill pull-left" ng-click="ctrl.doFilter(3);">flash</button>
-
+  	<div class="nav filter">
+      <button class="pull-left" ng-click="ctrl.doFilter('all')">Show all</button>
+      <button class="pull-left" ng-click="ctrl.doFilter(2)">html/js</button>
+      <button class="pull-left" ng-click="ctrl.doFilter(1)">ios</button>
+      <button class="pull-left" ng-click="ctrl.doFilter(4)">web app</button>
+      <button class="pull-left" ng-click="ctrl.doFilter(5)">hybrid</button>
+      <button class="pull-left" ng-click="ctrl.doFilter(3)">flash</button>
     </div>
   	<div ng-repeat="work in ctrl.works">
   		<div class="row">
   			<div ng-repeat="item in work" class="col-md-4 col-sm-6">
   				<div class="panel panel-default">
   					<div class="panel-heading">{{item.title}}</div>
+  					<h6>{{item.year}}</h6>
   					<div class="panel-body">{{item.description}}</div>
   				</div>
   			</div>
