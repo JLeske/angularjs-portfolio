@@ -8,6 +8,6 @@
  * Controller of the angularjsPortfolioApp
  */
 angular.module('angularjsPortfolioApp')
-  .controller('ContactController',[ '$http', function ($http) {
+  .controller('ContactController',[ function () {
 
   }]);

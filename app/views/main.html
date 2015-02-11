@@ -1,11 +1,11 @@
 <div class="jumbotron" ng-controller="MainCtrl as ctrl">
   <div>
   	<div class="nav filter">
-      <button class="pull-left" ng-click="ctrl.doFilter('all')">Show all</button>
-      <button class="pull-left" ng-click="ctrl.doFilter(2)">html/js</button>
-      <button class="pull-left" ng-click="ctrl.doFilter(1)">ios</button>
-      <button class="pull-left" ng-click="ctrl.doFilter(4)">web app</button>
-      <button class="pull-left" ng-click="ctrl.doFilter(5)">hybrid</button>
+      <button class="pull-left" ng-click="ctrl.doFilter('all')">Show all |</button>
+      <button class="pull-left" ng-click="ctrl.doFilter(2)">html/js |</button>
+      <button class="pull-left" ng-click="ctrl.doFilter(1)">ios |</button>
+      <button class="pull-left" ng-click="ctrl.doFilter(4)">web app |</button>
+      <button class="pull-left" ng-click="ctrl.doFilter(5)">hybrid |</button>
       <button class="pull-left" ng-click="ctrl.doFilter(3)">flash</button>
     </div>
   	<div ng-repeat="work in ctrl.works" class="portfolio-items">
@@ -16,7 +16,11 @@
   					
   					<div class="panel-body">
   						<h6>{{item.year}}</h6>
+              <img ng-src="/images/{{item.image}}"/>
   						<p>{{item.description}}</p>
+  						<h6>
+  							<a ng-href="{{item.client_url}}" target="_blank">{{item.client_url}}</a>
+  						</h6>
   					</div>
   				</div>
   			</div>

@@ -5,18 +5,14 @@ describe('Controller: MainCtrl', function () {
   // load the controller's module
   beforeEach(module('angularjsPortfolioApp'));
 
-  var MainCtrl,
-    scope;
+  var ctrl;
 
   // Initialize the controller and a mock scope
-  beforeEach(inject(function ($controller, $rootScope) {
-    scope = $rootScope.$new();
-    MainCtrl = $controller('MainCtrl', {
-      $scope: scope
-    });
+  beforeEach(inject(function ($controller) {
+    ctrl = $controller('MainCtrl');
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    //expect(scope.awesomeThings.length).toBe(0);
+  it('should attach a list of works', function () {
+    expect(ctrl.works.length).not.toBe(0);
   });
 });

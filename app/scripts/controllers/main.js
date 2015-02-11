@@ -12,17 +12,17 @@ angular.module('angularjsPortfolioApp')
         var self = this,
         	tmpData = [];
 
-        self.works = [];
+        self.works = ['xxx'];
         self.rawData = [];
         $http.get('./data/works.json')
             .success(function(data) {
                 console.log(data);
                 self.rawData = data;
                 
-                self.doFilter('all');
+                self.works = self.getNewWorksList('all');
             });
 
-        self.doFilter = function(type) {
+        self.getNewWorksList = function(type) {
         	var obj = {};
             console.log(type);
             tmpData = [];
@@ -35,14 +35,19 @@ angular.module('angularjsPortfolioApp')
             	for (var i = 0; i < self.rawData.length; i++) {
             		
             		obj = self.rawData[i];
-            		if ( obj.category_id == type )
+            		if ( obj.category_id === type.toString() )
 	            	{
 	            		tmpData.push(obj);
 	            	}
             	}
             }
             
-            self.works = self.chunk(tmpData, 4);
+            return self.chunk(tmpData, 4);
+        };
+
+        self.doFilter = function (type) {
+            
+            self.works = self.getNewWorksList(type);
         };
 
         self.chunk = function(arr, size) {
