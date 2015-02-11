@@ -10,7 +10,7 @@
     </div>
   	<div ng-repeat="work in ctrl.works" class="portfolio-items">
   		<div class="row">
-  			<div ng-repeat="item in work" class="col-md-3 col-sm-6">
+  			<div ng-repeat="item in work track by $index" class="col-md-3 col-sm-6">
   				<div class="panel panel-default">
   					<div class="panel-heading">{{item.title}}</div>
   					

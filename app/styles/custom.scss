@@ -3,11 +3,24 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+.header {
+	position: fixed;
+	left:0;
+	width:100%;
+	z-index:10;
+}
+
 .logo {
 	margin-left:60px;
 	float:left;
+	h1 {
+		margin-bottom:4px;
+	}
+
 	.subtitle {
-		font-size:10px;
+		font-size:.9em;
+		margin-top: 0;
+		letter-spacing: .04em;
 	}
 }
 
@@ -32,4 +45,8 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 		margin:10px 0 10px 0;
 		width:100%;
 	}
+}
+
+.jumbotron {
+	margin-top:100px;
 }
