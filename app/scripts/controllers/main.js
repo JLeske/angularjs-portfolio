@@ -42,7 +42,7 @@ angular.module('angularjsPortfolioApp')
             	}
             }
             
-            self.works = self.chunk(tmpData, 3);
+            self.works = self.chunk(tmpData, 4);
         };
 
         self.chunk = function(arr, size) {
